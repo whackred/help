@@ -1,4 +1,4 @@
-name: GHPages - mdBook
+name: GHPages mdBook
 
 on:
   push:
@@ -6,11 +6,13 @@ on:
     paths:
       - 'manual/**'
       - 'css/manual/**'
+      - 'com.sweaxizone.metro/**'
   pull_request:
     branches: [ "master" ]
     paths:
       - 'manual/**'
       - 'css/manual/**'
+      - 'com.sweaxizone.metro/**'
   workflow_dispatch:
     inputs:
       logLevel:
