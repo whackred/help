@@ -1,0 +1,9 @@
+[book]
+authors = ["matheusds4"]
+language = "en"
+src = "src"
+title = "Whack Red"
+
+[output.html]
+fold = { enable = true }
+theme = "../com.sweaxizone.metro/theme"
