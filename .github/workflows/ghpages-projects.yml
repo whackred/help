@@ -1,4 +1,4 @@
-name: GHPages mdBook
+name: GHPages projects
 
 on:
   push:
