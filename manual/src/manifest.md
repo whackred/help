@@ -178,18 +178,18 @@ unreachable-code = "warn"
 unused = "warn"
 ```
 
-## Terminal section
+## Shell section
 
-Used for contributing terminal applications, installable through `whackred terminal install`.
+Used for contributing command-line applications, installable through `whackred shell install`.
 
 ```toml
-[[terminal]]
+[[shell]]
 name = "mycmd1"
-main-class = "me.matt.eval.terminal.MyCommand1"
+main-class = "me.matt.eval.shell.MyCommand1"
 
-[[terminal]]
+[[shell]]
 name = "mycmd2"
-main-class = "me.matt.eval.terminal.MyCommand2"
+main-class = "me.matt.eval.shell.MyCommand2"
 ```
 
 ## Unit-testing sections
