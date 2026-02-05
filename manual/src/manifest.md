@@ -219,6 +219,8 @@ source-path = "test/es4"
 
 If there is no `[[test]]` section and there is a `test` directory, then a virtual `[[test]]` section is added with the default options.
 
+Internally, test compilation results go under something like `<package-dist-directory>/test/{name}`.
+
 ## Formatting section
 
 ```toml
