@@ -38,3 +38,12 @@ EyeExp["com.nothing.fw::flower"] = { url: Embed("flower.svg"), monochrome: true 
 ```
 
 The most common is for component libraries to provide a `Wrap` component that eliminates the general need for explicitly setting the implicit EyeExp prefix.
+
+The `eyexp(...)` CSS function also accepts a second color parameter to use for monochrome entries instead of the current CSS color.
+
+```css
+input[type="text"] {
+    backgroundImage: eyexp(search, param(searchColor));
+    /* ... */
+}
+```
