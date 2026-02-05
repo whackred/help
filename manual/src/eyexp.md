@@ -22,14 +22,19 @@ import whack.eyexp.EyeExp;
 
 EyeExp["com.nothing.fw::flower"] = { url: Embed("flower.svg"), monochrome: true };
 
-// e4x
-<w:Group s:eyexpPrefix="com.nothing.fw">
+// E4X
+
+<div s:eyexpPrefix="com.nothing.fw">
     <w:EyeExp name="flower" size={37}/>
-    <!-- as a css background. -->
-    <w:Group s:background="eyexp(flower) noRepeat center / contain"
-             s:width={37]
-             s:height={37}/>
-</w:Group>
+
+    <!-- as a CSS background. -->
+
+    <div s:background="eyexp(flower) noRepeat center / contain"
+         s:width={37}
+         s:height={37}>
+        <!-- --->
+    </div>
+</div>
 ```
 
 The most common is for component libraries to provide a `Wrap` component that eliminates the general need for explicitly setting the implicit EyeExp prefix.
