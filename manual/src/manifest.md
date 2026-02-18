@@ -171,7 +171,7 @@ source-path = "src"
 
 # Main component or class, for an application package.
 #
-main-component = "me.matt.eval.Main"
+main-class = "me.matt.eval.Main"
 
 # following: "error", "warn" or "allow"
 unreachable-code = "warn"
