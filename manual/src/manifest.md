@@ -46,7 +46,7 @@ version = "0.1.0"
 # - "http://www.w3.org/1994/web" (web browser)
 # - "http://www.nodejs.org/2009" (NodeJS)
 #
-runtime = "http://www.w3.org/1994/javascript"
+runtime = "http://www.w3.org/1994/web"
 
 # Author list.
 #
@@ -214,7 +214,7 @@ runtime = "http://www.nodejs.org/2009"
 #
 # Defaults to "test" if there is only one [[test]] section.
 #
-source-path = "test/es4"
+source-path = "test/sx"
 ```
 
 If there is no `[[test]]` section and there is a `test` directory, then a virtual `[[test]]` section is added with the default options.
