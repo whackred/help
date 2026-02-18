@@ -11,7 +11,7 @@ Monochrome resources are displayed filled with the CSS (?inherited) `color` prop
 
 The convention is for `EyeExp` entries to have a name based on enum names, such as `light_spark`. There is an optional but recommended namespace prefix syntax: `com.nothing.fw::light_spark`, which prevents collision between libraries. Setting an entry will automatically manage namespaces efficiently to avoid internally repeating the prefix string in-memory.
 
-The CSS `eyexpPrefix` property allows setting an inheritable namespace prefix to implicitly use within EyeExp names.
+The CSS `eyexpPrefix` property allows setting an inheritable namespace prefix to implicitly use within EyeExp names. It supports fallbacks as well.
 
 Some examples:
 
@@ -24,7 +24,7 @@ EyeExp["com.nothing.fw::flower"] = { url: Embed("flower.svg"), monochrome: true 
 
 // E4X
 
-<div s:eyexpPrefix="com.nothing.fw">
+<div s:eyexpPrefix="'com.nothing.fw'">
     <w:EyeExp name="flower" size={37}/>
 
     <!-- as a CSS background. -->
