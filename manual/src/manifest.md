@@ -181,10 +181,11 @@ unused = "warn"
 
 ## Constants section
 
-The constants section is used for assigning configuration constants to plain expressions for use in ShockScript conditional compilation exclusively for the current package.
+The constants section is used for assigning configuration constants to plain expressions, booleans or numbers for use in ShockScript conditional compilation exclusively for the current package.
 
 ```toml
 [constants]
+__q__::x = true
 __q__::x = "true"
 ```
 
@@ -195,7 +196,11 @@ Note that string literals must appear within nested quotes, as in:
 __q__::x = "'text'"
 ```
 
-Alternatively, the `whackred` build commands allow specifying constants that apply to all packages, which may be overriden by the `constants` section for a specific package.
+The precedence for configuration constant overrides is as follows:
+
+1. The constants specified in the `constants` section for the current package
+2. Shell-specified constants
+3. Compiler implicit constants
 
 ## Shell section
 
