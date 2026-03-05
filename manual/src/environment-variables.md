@@ -6,10 +6,10 @@
 
 ## Environment variables Whack Red sets for packages
 
-These environment variables are available for use with `env::VAR_NAME` expressions within Whack Red packages, their build scripts and unit-testing classes.
+These environment variables are available for use with `Env::VAR_NAME` expressions within Whack Red packages, their build scripts and unit-testing classes.
 
-```
-env::WHACKRED_MANIFEST_DIR
+```sx
+Env::WHACKRED_MANIFEST_DIR
 ```
 
 - `TARGET` - Path to the artifact target directory based on platform and build profile.
@@ -25,12 +25,12 @@ env::WHACKRED_MANIFEST_DIR
 
 For setting static DotEnv variables for ShockScript to use, create an `.env` file in your package's directory, with contents like:
 
-```
+```plain
 FOO=bar
 ```
 
 You can then refer to that in ShockScript with expressions like:
 
-```
-env::FOO
+```sx
+Env::FOO
 ```

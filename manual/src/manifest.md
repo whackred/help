@@ -8,12 +8,12 @@ A manifest may describe a package and a workspace simultaneously.
 
 ```toml
 [package]
-name = "me.matt.eval"
+name = "me.mattqual.eval"
 version = "0.1.0"
 runtime = "http://www.w3.org/1994/web"
 
 [compiler-options]
-main-class = "me.matt.eval.Main"
+main-class = "me.mattqual.eval.Main"
 ```
 
 ## Package section
@@ -121,8 +121,8 @@ members = [
 # Dependencies.
 #
 [dependencies]
-me.matt.foo = "0.1"
-me.matt.bar = { path = "../bar", version = "0.1" }
+me.mattqual.foo = "0.1"
+me.mattqual.bar = { path = "../bar", version = "0.1" }
 # git dependencies may have a `rev`, `tag` or `branch` keys.
 #
 # rev examples:
@@ -141,7 +141,7 @@ me.matt.bar = { path = "../bar", version = "0.1" }
 # If it's a workspace, then Whack Red will look for the
 # matching member, inheriting any dependencies.
 #
-me.matt.qux = { git = "https://github.com/matt/qux", version = "0.1" }
+me.mattqual.qux = { git = "https://github.com/matt/qux", version = "0.1" }
 
 # Development dependencies. *Used by unit-testing.*
 #
@@ -169,14 +169,33 @@ com.omega.game = "1"
 #
 source-path = "src"
 
-# Main component or class, for an application package.
+# For the web, a Whack DS component without props.
+# For NodeJS, any class with default constructor.
 #
-main-class = "me.matt.eval.Main"
+main-class = "me.mattqual.eval.Main"
 
 # following: "error", "warn" or "allow"
 unreachable-code = "warn"
 unused = "warn"
 ```
+
+## Constants section
+
+The constants section is used for assigning configuration constants to plain expressions for use in ShockScript conditional compilation exclusively for the current package.
+
+```toml
+[constants]
+__q__::x = "true"
+```
+
+Note that string literals must appear within nested quotes, as in:
+
+```toml
+[constants]
+__q__::x = "'text'"
+```
+
+Alternatively, the `whackred` build commands allow specifying constants that apply to all packages, which may be overriden by the `constants` section for a specific package.
 
 ## Shell section
 
@@ -185,11 +204,11 @@ Used for contributing command-line applications, installable through `whackred s
 ```toml
 [[shell]]
 name = "mycmd1"
-main-class = "me.matt.eval.shell.MyCommand1"
+main-class = "me.mattqual.eval.shell.MyCommand1"
 
 [[shell]]
 name = "mycmd2"
-main-class = "me.matt.eval.shell.MyCommand2"
+main-class = "me.mattqual.eval.shell.MyCommand2"
 ```
 
 ## Unit-testing sections
