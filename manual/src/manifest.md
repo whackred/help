@@ -154,10 +154,11 @@ com.alpha.lets-go = "1"
 com.omega.game = "1"
 
 # NPM dependencies, for internal use
-# in Whack Red facade packages.
+# in Whack Red projects.
 #
 [npm-dependencies]
 "decimal.js" = "1"
+"foo" = { path = "foo" }  # file: dependency
 ```
 
 ## Compiler options section
