@@ -31,7 +31,7 @@ final = (
 )
 ```
 
-The most common is for component libraries to provide a `Wrap` component that eliminates the general need for explicitly setting the implicit EyeExp prefix.
+The most common is for component libraries to provide an `Application` component that eliminates the general need for explicitly setting the implicit EyeExp prefix.
 
 ## Enumeration
 
